@@ -1,0 +1,7 @@
+{
+  "typescript.tsdk": "./node_modules/typescript/lib",
+  "typescript.enablePromptUseWorkspaceTsdk": true,
+  "yaml.schemas": {
+    "https://json.schemastore.org/github-issue-config.json": "file:///Users/nikolas.santis/Documents/develop/me/burnout/.github/ISSUE_TEMPLATE/config.yml"
+  }
+}

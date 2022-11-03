@@ -1,0 +1,122 @@
+{
+  "questionnaire": [
+    {
+      "id": "burnout-1",
+      "question": "Me siento emocionalmente agotada/o por mi trabajo."
+    },
+    {
+      "id": "burnout-2",
+      "question": "Me siento cansada/o al final de la jornada de trabajo."
+    },
+    {
+      "id": "burnout-3",
+      "question": "Cuando me levanto por la mañana y me enfrento a otra jornada de trabajo me siento cansada/o."
+    },
+    {
+      "id": "burnout-4",
+      "question": "Tengo facilidad para comprender como se sienten mis colegas de trabajo"
+    },
+    {
+      "id": "burnout-5",
+      "question": "Creo que estoy tratando a algunos colegas como si fueran objetos."
+    },
+    {
+      "id": "burnout-6",
+      "question": "Siento que trabajar todo el día con personas supone un gran esfuerzo y es estresante."
+    },
+    {
+      "id": "burnout-7",
+      "question": "Creo que trato con mucha eficacia los problemas de mis colegas."
+    },
+    {
+      "id": "burnout-8",
+      "question": "Siento que mi trabajo me está desgastando. Me siento agotada/o por mi trabajo."
+    },
+    {
+      "id": "burnout-9",
+      "question": "Siento que influyo positivamente en la vida de otras personas a través de mi trabajo."
+    },
+    {
+      "id": "burnout-10",
+      "question": "Siento que me he hecho más insensible con la gente desde que comencé este trabajo."
+    },
+    {
+      "id": "burnout-11",
+      "question": "Me preocupa que este trabajo me esté endureciendo emocionalmente."
+    },
+    {
+      "id": "burnout-12",
+      "question": "Me siento con mucha energía."
+    },
+    {
+      "id": "burnout-13",
+      "question": "Me siento frustrada/o en mi trabajo."
+    },
+    {
+      "id": "burnout-14",
+      "question": "Siento que trabajo demasiado."
+    },
+    {
+      "id": "burnout-15",
+      "question": "Siento que realmente no me importa lo que les ocurra a mis colegas."
+    },
+    {
+      "id": "burnout-16",
+      "question": "Siento que trabajar en contacto directo con la gente me estresa."
+    },
+    {
+      "id": "burnout-17",
+      "question": "Siento que puedo crear con facilidad un clima agradable y relajado en mi entorno de trabajo."
+    },
+    {
+      "id": "burnout-18",
+      "question": "Me siento estimulado cuando he estado trabajando con mis colegas."
+    },
+    {
+      "id": "burnout-19",
+      "question": "He conseguido muchas cosas gratificantes y valiosas en este trabajo."
+    },
+    {
+      "id": "burnout-20",
+      "question": "Me siento como si estuviera al límite de mis posibilidades."
+    },
+    {
+      "id": "burnout-21",
+      "question": "Siento que en mi trabajo los problemas emocionales son tratados de forma adecuada."
+    },
+    {
+      "id": "burnout-22",
+      "question": "Me parece que mis colegas me culpan de alguno de sus problemas."
+    }
+  ],
+  "points": [
+    {
+      "id": "0",
+      "text": "Nunca."
+    },
+    {
+      "id": "1",
+      "text": "Pocas veces al año o menos."
+    },
+    {
+      "id": "2",
+      "text": "Una vez al mes o menos."
+    },
+    {
+      "id": "3",
+      "text": "Unas pocas veces al mes."
+    },
+    {
+      "id": "4",
+      "text": "Una vez a la semana."
+    },
+    {
+      "id": "5",
+      "text": "Unas pocas veces a la semana."
+    },
+    {
+      "id": "6",
+      "text": "Todos los días."
+    }
+  ]
+}

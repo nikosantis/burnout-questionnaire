@@ -4,10 +4,10 @@ import { getTranslateFromMap } from 'lib/translate'
 import Intro from 'components/intro'
 import Title from 'components/title'
 import Questions from 'components/questions'
-import ModalIndexPage from './modal'
+import ModalEnPage from './modal'
 
-const home = getTranslateFromMap('home', 'es')
-const common = getTranslateFromMap('common', 'es')
+const home = getTranslateFromMap('home', 'en')
+const common = getTranslateFromMap('common', 'en')
 
 export default function HomePage() {
   return (
@@ -26,7 +26,7 @@ export default function HomePage() {
             points={common.points}
           />
         </div>
-        <ModalIndexPage />
+        <ModalEnPage />
       </main>
       <Footer />
     </div>

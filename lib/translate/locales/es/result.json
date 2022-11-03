@@ -1,0 +1,16 @@
+{
+  "title": "Resultado del Cuestionario 🔥 Burnout 🔥 Laboral",
+  "description": "Cuestionario Burnout 🔥 basado en Maslach Burnout Inventory (MBI) para medir el desgaste profesional y laboral.",
+  "information": "A partir de tus respuestas, el resultado es:",
+  "depersonalisation": "Despersonalización",
+  "depersonalisationSigns": "más de 9",
+  "emotionalExhaustion": "Cansancio Emocional",
+  "emotionalExhaustionSigns": "más de 26",
+  "personalFulfillment": "Realización Personal",
+  "personalFulfillmentSigns": "menos de 34",
+  "evaluatedAspect": "Aspectos Evaluados",
+  "total": "Total Obtenido",
+  "signs": "Indicios de Burnout",
+  "cancelText": "Cerrar",
+  "downloadText": "Descargar Imagen"
+}

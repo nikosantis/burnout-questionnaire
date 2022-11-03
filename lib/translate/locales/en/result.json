@@ -1,0 +1,16 @@
+{
+  "title": "Result of 🔥 Burnout 🔥 Questionnaire for Workers",
+  "description": "Burnout Questionnaire 🔥 based on Maslach Burnout Inventory (MBI) to measure professional and job burnout.",
+  "information": "From your answers, the result is:",
+  "depersonalisation": "Depersonalisation",
+  "depersonalisationSigns": "more than 9",
+  "emotionalExhaustion": "Emotional Exhaustion",
+  "emotionalExhaustionSigns": "more than 26",
+  "personalFulfillment": "Personal Fulfillment",
+  "personalFulfillmentSigns": "less than 34",
+  "evaluatedAspect": "Evaluated Aspects",
+  "total": "Total Score",
+  "signs": "Signs of Burnout",
+  "cancelText": "Close",
+  "downloadText": "Download Image"
+}

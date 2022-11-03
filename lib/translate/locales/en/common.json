@@ -1,0 +1,122 @@
+{
+  "questionnaire": [
+    {
+      "id": "burnout-1",
+      "question": "I feel emotionally exhausted because of my work."
+    },
+    {
+      "id": "burnout-2",
+      "question": "I feel worn out at the end of a working day."
+    },
+    {
+      "id": "burnout-3",
+      "question": "I feel tired as soon as I get up in the morning and see a new working day stretched out in front of me."
+    },
+    {
+      "id": "burnout-4",
+      "question": "I can easily understand the actions of my colleagues/supervisors."
+    },
+    {
+      "id": "burnout-5",
+      "question": "I get the feeling that I treat some clients/colleagues impersonally, as if they were objects."
+    },
+    {
+      "id": "burnout-6",
+      "question": "Working with people the whole day is stressful for me."
+    },
+    {
+      "id": "burnout-7",
+      "question": "I deal with other people's problems successfully."
+    },
+    {
+      "id": "burnout-8",
+      "question": "I feel burned out because of my work."
+    },
+    {
+      "id": "burnout-9",
+      "question": "I feel that I influence other people positively through my work."
+    },
+    {
+      "id": "burnout-10",
+      "question": "I have become more callous to people since I have started doing this job."
+    },
+    {
+      "id": "burnout-11",
+      "question": "I'm afraid that my work makes me emotionally harder."
+    },
+    {
+      "id": "burnout-12",
+      "question": "I feel full of energy."
+    },
+    {
+      "id": "burnout-13",
+      "question": "I feel frustrated by my work."
+    },
+    {
+      "id": "burnout-14",
+      "question": "I get the feeling that I work too hard."
+    },
+    {
+      "id": "burnout-15",
+      "question": "I'm not really interested in what is going on with many of my colleagues."
+    },
+    {
+      "id": "burnout-16",
+      "question": "Being in direct contact with people at work is too stressful."
+    },
+    {
+      "id": "burnout-17",
+      "question": "I find it easy to build a relaxed atmosphere in my working environment."
+    },
+    {
+      "id": "burnout-18",
+      "question": "I feel stimulated when I been working closely with my colleagues."
+    },
+    {
+      "id": "burnout-19",
+      "question": "I have achieved many rewarding objectives in my work."
+    },
+    {
+      "id": "burnout-20",
+      "question": "I feel as if I'm at my wits' end."
+    },
+    {
+      "id": "burnout-21",
+      "question": "In my work I am very relaxed when dealing with emotional problems."
+    },
+    {
+      "id": "burnout-22",
+      "question": "I have the feeling that my colleagues blame me for some of their problems."
+    }
+  ],
+  "points": [
+    {
+      "id": "0",
+      "text": "Never."
+    },
+    {
+      "id": "1",
+      "text": "At least a few times a year."
+    },
+    {
+      "id": "2",
+      "text": "At least once a month."
+    },
+    {
+      "id": "3",
+      "text": "Several times a month."
+    },
+    {
+      "id": "4",
+      "text": "Once a week."
+    },
+    {
+      "id": "5",
+      "text": "Several times a week."
+    },
+    {
+      "id": "6",
+      "text": "Every day."
+    }
+  ]
+}
