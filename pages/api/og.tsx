@@ -60,7 +60,7 @@ export default function handler(req: NextRequest) {
         emoji: 'twemoji'
       }
     )
-  } catch (error) {
+  } catch (error: any) {
     console.log(error.message)
     return new Response(`Failed to generate the image`, {
       status: 500
