@@ -3,43 +3,48 @@
 import { Fragment, useRef } from 'react'
 import { Dialog, Transition } from '@headlessui/react'
 import html2canvas from 'html2canvas'
-import { BurnoutValues } from 'lib/burnout/types'
 
-type ResultType = {
-  value: string
-  text: string
-  result: number
-  originalResult: BurnoutValues
-  signs: string
-}
+import { useTranslate } from 'lib/contexts/translate'
 
 type ModalProps = {
   show: boolean
   onClose: () => void
-  onReset: () => void
-  title: string
-  information: string
-  content: {
-    evaluatedAspect: string
-    total: string
-    signs: string
-    emotionalExhaustion: ResultType
-    depersonalisation: ResultType
-    personalFulfillment: ResultType
-  }
-  cancelText: string
-  downloadText: string
+  emotionalExhaustionResult: number
+  emotionalExhaustionValue: string
+  personalFulfillmentResult: number
+  personalFulfillmentValue: string
+  depersonalisationResult: number
+  depersonalisationValue: string
 }
 
 export default function Modal({
   show,
   onClose,
-  title,
-  information,
-  content,
-  cancelText,
-  downloadText
+  emotionalExhaustionResult,
+  emotionalExhaustionValue,
+  personalFulfillmentResult,
+  personalFulfillmentValue,
+  depersonalisationResult,
+  depersonalisationValue
 }: ModalProps) {
+  const {
+    resultTranslate: {
+      title,
+      information,
+      evaluatedAspect,
+      total,
+      signs,
+      depersonalisation,
+      depersonalisationSigns,
+      emotionalExhaustion,
+      emotionalExhaustionSigns,
+      personalFulfillment,
+      personalFulfillmentSigns,
+      downloadText,
+      cancelText,
+      imageCreated
+    }
+  } = useTranslate()
   const printRef = useRef<HTMLDivElement>(null)
 
   const handleDownloadImage = async () => {
@@ -69,7 +74,11 @@ export default function Modal({
   }
   return (
     <Transition appear show={show} as={Fragment}>
-      <Dialog as='div' className='relative z-10' onClose={() => {}}>
+      <Dialog
+        as='div'
+        className='relative z-10 text-slate-900 dark:text-slate-200'
+        onClose={() => {}}
+      >
         <Transition.Child
           as={Fragment}
           enter='ease-out duration-300'
@@ -94,82 +103,83 @@ export default function Modal({
               leaveTo='opacity-0 scale-95'
             >
               <Dialog.Panel
-                className='w-full max-w-xl transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all'
+                className='w-full max-w-xl transform overflow-hidden rounded-2xl bg-slate-50 dark:bg-slate-800 p-6 text-left align-middle shadow-xl transition-all'
                 ref={printRef}
               >
-                <Dialog.Title
-                  as='h3'
-                  className='text-lg font-medium leading-6 text-gray-900'
-                >
+                <Dialog.Title as='h3' className='text-lg font-medium leading-6'>
                   {title}
                 </Dialog.Title>
 
                 <div className='mt-2'>
-                  <p className='text-sm text-gray-500 mb-6'>{information}</p>
+                  <p className='text-sm mb-6'>{information}</p>
                   <div className='rounded-md w-full overflow-x-auto'>
-                    <table className='table-auto w-full border-collapse'>
-                      <thead className='rounded-t-md bg-gray-100'>
+                    <table className='table-auto w-full border-collapse rounded-2xl'>
+                      <thead className='rounded-t-md bg-slate-500 dark:bg-slate-900 text-white'>
                         <tr>
                           <th className='text-sm py-3 px-6' scope='col'>
-                            {content.evaluatedAspect}
+                            {evaluatedAspect}
                           </th>
                           <th
                             className='text-center text-sm py-3 px-6'
                             scope='col'
                           >
-                            {content.total}
+                            {total}
                           </th>
                           <th
                             className='text-center text-sm py-3 px-6'
                             scope='col'
                           >
-                            {content.signs}
+                            {signs}
                           </th>
                         </tr>
                       </thead>
 
-                      <tbody className='bg-gray-50'>
-                        <tr>
+                      <tbody className='bg-slate-100 dark:bg-slate-700 rounded-b-2xl'>
+                        <tr className='border-b border-slate-300 dark:border-slate-600'>
                           <td
-                            className='py-4 px-6 font-medium text-sm'
+                            className='py-4 px-6 font-medium text-sm border-r border-slate-300 dark:border-slate-600'
                             scope='row'
                           >
-                            {content.emotionalExhaustion.text}
+                            {emotionalExhaustion}
+                          </td>
+                          <td className='py-4 px-6 font-medium text-sm text-center border-r border-slate-300 dark:border-slate-600'>
+                            {emotionalExhaustionResult}
                           </td>
                           <td className='py-4 px-6 font-medium text-sm text-center'>
-                            {content.emotionalExhaustion.result}
+                            {emotionalExhaustionValue} <br />
+                            <small>({emotionalExhaustionSigns})</small>
+                          </td>
+                        </tr>
+                        <tr className='border-b border-slate-300 dark:border-slate-600'>
+                          <td
+                            className='py-4 px-6 font-medium text-sm border-r border-slate-300 dark:border-slate-600'
+                            scope='row'
+                          >
+                            {depersonalisation}
+                          </td>
+                          <td className='py-4 px-6 font-medium text-sm text-center border-r border-slate-300 dark:border-slate-600'>
+                            {depersonalisationResult}
                           </td>
                           <td className='py-4 px-6 font-medium text-sm text-center'>
-                            {content.emotionalExhaustion.value} <br />
-                            <small>({content.emotionalExhaustion.signs})</small>
+                            {depersonalisationValue}
+                            <br />
+                            <small>({depersonalisationSigns})</small>
                           </td>
                         </tr>
                         <tr>
                           <td
-                            className='py-4 px-6 font-medium text-sm'
+                            className='py-4 px-6 font-medium text-sm border-r border-slate-300 dark:border-slate-600'
                             scope='row'
                           >
-                            {content.depersonalisation.text}
+                            {personalFulfillment}
+                          </td>
+                          <td className='py-4 px-6 font-medium text-sm text-center border-r border-slate-300 dark:border-slate-600'>
+                            {personalFulfillmentResult}
                           </td>
                           <td className='py-4 px-6 font-medium text-sm text-center'>
-                            {content.depersonalisation.result}
-                          </td>
-                          <td className='py-4 px-6 font-medium text-sm text-center'>
-                            {content.depersonalisation.value}
-                          </td>
-                        </tr>
-                        <tr>
-                          <td
-                            className='py-4 px-6 font-medium text-sm'
-                            scope='row'
-                          >
-                            {content.personalFulfillment.text}
-                          </td>
-                          <td className='py-4 px-6 font-medium text-sm text-center'>
-                            {content.personalFulfillment.result}
-                          </td>
-                          <td className='py-4 px-6 font-medium text-sm text-center'>
-                            {content.personalFulfillment.value}
+                            {personalFulfillmentValue}
+                            <br />
+                            <small>({personalFulfillmentSigns})</small>
                           </td>
                         </tr>
                       </tbody>
@@ -196,10 +206,7 @@ export default function Modal({
                 </div>
 
                 <div className='mt-4 w-full'>
-                  <p className='text-sm text-gray-400 text-center'>
-                    Image created on http://localhost:3000/ <br />
-                    by Nikolas Santis
-                  </p>
+                  <p className='text-sm text-center'>{imageCreated}</p>
                 </div>
               </Dialog.Panel>
             </Transition.Child>

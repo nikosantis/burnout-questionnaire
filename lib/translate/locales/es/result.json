@@ -12,5 +12,6 @@
   "total": "Total Obtenido",
   "signs": "Indicios de Burnout",
   "cancelText": "Cerrar",
-  "downloadText": "Descargar Imagen"
+  "downloadText": "Descargar Imagen",
+  "imageCreated": "Imagen creada en burnout-questionnaire.vercel.app"
 }
