@@ -1,4 +1,3 @@
-import { headers } from 'next/headers'
 import { Roboto } from '@next/font/google'
 
 import './globals.css'
@@ -18,11 +17,8 @@ type RootLayoutProps = {
 }
 
 export default function RootLayout({ children }: RootLayoutProps) {
-  const headersList = headers()
-  const lang = headersList.get('Accept-Language')
-  const locale = lang?.split(',')[0].split('-')[0]
   return (
-    <html lang={locale || 'es'} className={roboto.className}>
+    <html lang='es' className={roboto.className}>
       <head>
         <meta name='viewport' content='width=device-width, initial-scale=1.0' />
         <link

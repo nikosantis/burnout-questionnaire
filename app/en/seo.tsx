@@ -13,13 +13,20 @@ export default function SeoIndex() {
       <meta property='og:site_name' content={seoContent.title} />
       <meta property='og:description' content={seoContent.description} />
       <meta property='og:title' content={seoContent.title} />
-      <meta property='og:locale' content='es' />
-      <meta property='og:locale:alternate' content='es' />
+      <meta property='og:locale' content='en' />
+      <meta
+        property='og:image'
+        content='https://burnout-questionnaire.vercel.app/api/og/?locale=en'
+      />
 
       <meta name='twitter:card' content='summary_large_image' />
       <meta name='twitter:site' content='@nikosantise' />
       <meta name='twitter:title' content={seoContent.title} />
       <meta name='twitter:description' content={seoContent.description} />
+      <meta
+        name='twitter:image'
+        content='https://burnout-questionnaire.vercel.app/api/og/?locale=en'
+      />
     </>
   )
 }
