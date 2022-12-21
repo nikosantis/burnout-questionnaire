@@ -3,8 +3,8 @@ import { Roboto } from '@next/font/google'
 import './globals.css'
 
 import BurnoutProvider from './burnout-provider'
-
 import ModalProvider from './modal-provider'
+import AnalyticsWrapper from 'components/analytics'
 
 const roboto = Roboto({
   weight: ['100', '300', '400', '500', '700', '900'],
@@ -47,6 +47,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
       <body className='bg-slate-50 dark:bg-slate-900'>
         <ModalProvider>
           <BurnoutProvider>{children}</BurnoutProvider>
+          <AnalyticsWrapper />
         </ModalProvider>
       </body>
     </html>

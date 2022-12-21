@@ -23,7 +23,7 @@ export default function SeoIndex() {
       <meta property='og:locale' content='es' />
       <meta
         property='og:image'
-        content='https://burnout-questionnaire.vercel.app/api/og/?locale=es'
+        content='https://burnout-questionnaire.vercel.app/images/burnout-questionnaire-og-es.png'
       />
 
       <meta name='twitter:card' content='summary_large_image' />
@@ -32,7 +32,7 @@ export default function SeoIndex() {
       <meta name='twitter:description' content={seoContent.description} />
       <meta
         name='twitter:image'
-        content='https://burnout-questionnaire.vercel.app/api/og/?locale=es'
+        content='https://burnout-questionnaire.vercel.app/images/burnout-questionnaire-og-es.png'
       />
     </>
   )
