@@ -14,7 +14,6 @@ import { burnoutSubmit } from 'lib/burnout/burnout-submit'
 import { useBurnout } from 'lib/contexts/burnout'
 import { useModal } from 'lib/contexts/modal'
 import { burnoutOnInput } from 'lib/burnout/burnout-on-input'
-import { BurnoutNamedQuestions } from 'lib/burnout/types'
 
 type FormSubmitProps = {
   children: ReactNode
@@ -30,6 +29,7 @@ export default function FormSubmit({ children }: FormSubmitProps) {
     e.preventDefault()
     const result = burnoutSubmit(e)
     if (result) {
+      window.gtag('event', 'burnout_submit')
       setBurnoutResults(result)
       setShow(true)
     }
